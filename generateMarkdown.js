@@ -2,11 +2,11 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) { 
     if (license !== 'no license') {
-      return `
-    ![badge](https://img.shields.io/badge/license-${license}-teal)
-      `;
-    } else {
-      return ' ';
+return `
+![badge](https://img.shields.io/badge/license-${license}-teal)
+`;
+} else {
+return ' ';
     }
   }
 // TODO: Create a function that returns the license link
@@ -19,35 +19,35 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-    return `
-    # ${data.title}
+return `
+# ${data.title}
     
-    ${renderLicenseBadge(data.license)}
-    ### Table-of-Contents
-    * [Description](#description)
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [Tests](#tests)
-    * [Questions](#questions)
+${renderLicenseBadge(data.license)}
+### Table-of-Contents
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Tests](#tests)
+* [Questions](#questions)
     
-    ## [Description](#table-of-contents)
-    ${data.description}
+## [Description](#table-of-contents)
+${data.description}
    
-    ## [Installation](#table-of-contents)
-    ${data.installation}
+## [Installation](#table-of-contents)
+${data.installation}
+
+## [Usage](#table-of-contents)
+${data.usage}
     
-    ## [Usage](#table-of-contents)
-    ${data.usage}
-    
-    ${renderLicenseSection(data.license)}
-    ## [Tests](#table-of-contents)
-    ${data.test}
-    ## [Questions](#table-of-contents)
-    Please contact me using the following links:
-    [GitHub](https://github.com/${data.githubUsername})
-    [Email: ${data.email}](mailto:${data.email})
-  `;
-  }
+${renderLicenseSection(data.license)}
+## [Tests](#table-of-contents)
+${data.test}
+## [Questions](#table-of-contents)
+Please contact me using the following links:
+[GitHub](https://github.com/${data.githubUsername})
+[Email: ${data.email}](mailto:${data.email})
+`;
+}
   
 
 module.exports = generateMarkdown;
