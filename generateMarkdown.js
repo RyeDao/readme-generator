@@ -61,7 +61,7 @@ ${renderLicenseSection(data.license)}
 ${data.test}
 ## [Questions](#table-of-contents)
 Please contact me using the following links:
-[GitHub](https://github.com/${data.githubUsername})
+[GitHub](https://github.com/${data.github})
 [Email: ${data.email}](mailto:${data.email})
 `;
 }
